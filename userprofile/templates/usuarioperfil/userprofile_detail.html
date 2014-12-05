@@ -1,4 +1,27 @@
+   <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Member Login</title>
 
+    <!-- Bootstrap -->
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+      </head>
+  <body style="background:#eee;">
+    
+    <div class="container">
+            <p><br/></p>
+        <div class="row">
+            <div class="col-md-10"></div>
+            <div class="col-md-6">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                            <div class="page-header">
+                            <h3>Rudy Soler</h3>
+                        </div>
+         <h1>detalle de usuario :</h1> 
 <table>
 
     <p><strong>Usuario : </strong>{{useri.useri}}</p>
@@ -11,4 +34,18 @@
     <p><strong>Email : </strong> {{useri.useri.email}}</p>
     |{% if perms.usuarioperfil.change_zet %}<a href="{%url 'update_user' useri.id %}"> UPDATE PERFIL</a>{% endif %}||{% if perms.usuarioperfil.delete_zef %}<a href="{%url 'delete_user' useri.id %}">DELETE USER</a>{% endif %}|
     <a href="{% url 'home'%}">HOME</a>  
+
+    
 </table>
+         </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+  </body>
+</html>
