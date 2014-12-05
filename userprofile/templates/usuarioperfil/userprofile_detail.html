@@ -1,0 +1,14 @@
+
+<table>
+
+    <p><strong>Usuario : </strong>{{useri.useri}}</p>
+    <p><strong>Telefono : </strong>{{useri.telefono}}</p>
+    <p> <strong>Provincia : </strong>{{useri.provincia}}</p>
+    <p><strong>Dsitrtito : </strong>{{useri.distrito}}</p>
+    <p><strong>Departamento : </strong>{{useri.departamento}}</p>
+    <p><strong>Zona Horaria : </strong> {{useri.zona_horaria}}</p>
+    <p><strong>Nombre : </strong> {{useri.useri.username}}</p>
+    <p><strong>Email : </strong> {{useri.useri.email}}</p>
+    |{% if perms.usuarioperfil.change_zet %}<a href="{%url 'update_user' useri.id %}"> actualizandoi perfil</a>{% endif %}||{% if perms.usuarioperfil.delete_zef %}<a href="{%url 'delete_user' useri.id %}">delete Uusuario</a>{% endif %}|
+    <a href="{% url 'home'%}">INicio</a>  
+</table>

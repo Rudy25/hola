@@ -1,0 +1,18 @@
+<table>
+    <thead>
+        <tr>
+            <td>nombre</td>
+        </tr>
+    </thead>
+    <tbody>
+        {%for user in userprofile_list%}
+        <tr>
+            <th><a href="{% url 'detail_user' user.id %}  ">{{user}}</a></th>
+            
+         <!--   {%if perms.usuarioperfil.view_zet %} <th><a href="{% url
+                 'detail_user' user.id %}  ">{{user}}</a></th>{% endif %} -->
+        </tr>
+        {%endfor %}
+    </tbody>
+    <a href= "{% url 'home'%}">User</a>
+</table>
