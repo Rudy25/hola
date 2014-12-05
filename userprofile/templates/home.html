@@ -1,35 +1,38 @@
-<table>
+<table><th>Nombre :</th>  
         <tr>
             <td>{{ user.username.label_tag }}</td>
             <td>{{ user.username }}</td>
+
         </tr>
- 
+       
+        <th>Email :</th>              
         <tr>
             <td>{{ user.email.label_tag }}</td>
             <td>{{ user.email }}</td>
         </tr>
- 
+        <th>Primer Nombre :</th>
         <tr>
             <td>{{ user.first_name.label_tag }}</td>
             <td>{{ user.first_name }}</td>
         </tr>
- 
-        <tr>
+        <th>Segundo Nombre :</th>
+         <tr>
             <td>{{ user.last_name.label_tag }}</td>
             <td>{{ user.last_name }}</td>
         </tr>
- 
+        <th>Hora De Ingreso :</th>
         <tr>
             <td>{{ user.date_joined.label_tag }}</td>
             <td>{{ user.date_joined }}</td>
         </tr>
- 
+        <th>Hora Despues de Ingreso :</th>
         <tr>
             <td>{{ user.last_login.label_tag }}</td>
             <td>{{ user.last_login }}</td>
-           
         </tr>
-    </table>
+    
+ 
+      </table>
     <a href="{% url 'create_user' %}">add</a>||
     <!-- {% if perms.usuarioprefil.add_zet %} | <a href="{% url 'create_user'
         %}">add</a>{% endif %} -->
