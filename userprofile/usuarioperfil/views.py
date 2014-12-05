@@ -62,12 +62,10 @@ class UserprofileCreate(CreateView):
 def home(request):
     return render_to_response('home.html', {'user': request.user}, context_instance=RequestContext(request))
 
-#def DetalleUser(request, Userprofile_id):
 
 class UserprofileList(ListView):
     model =   Userprofile
 
-#@method_decorator(permission_required('usuarioperfil.view_zet'))
 def UserDetail(request, Userprofile_id):
     useri = get_object_or_404(Userprofile, id = Userprofile_id)
     return render(request, 'usuarioperfil/userprofile_detail.html', {'useri':useri})
@@ -75,7 +73,7 @@ def UserDetail(request, Userprofile_id):
 class UserprofileUpdate(UpdateView):
     model = Userprofile
     form_class = UserprofileForm
-    @method_decorator(permission_required('usuarioperfil.change_zet'))
+    @method_decorator(permission_required('usuarioperfil.change_app'))
     def dispatch(self, *args, **kwargs):
         return super(UserprofileUpdate, self).dispatch(*args, **kwargs)
 
@@ -88,7 +86,7 @@ class UserUpdate(UpdateView):
 
 class UserprofileDelete(DeleteView):
     model = Userprofile
-    @method_decorator(permission_required('usuarioperfil.delete_zet'))
+    @method_decorator(permission_required('usuarioperfil.delete_app'))
     def dispatch(self, *args, **kwargs):
         return super(UserprofileDelete, self).dispatch(*args, **kwargs)
     def get_success_url(self):

@@ -15,11 +15,11 @@ class Userprofile(models.Model):
     zona_horaria = TimeZoneField(default= 'America/Lima')
     class Meta:
         permissions = (
-            ('list_zet', 'Can view list Zetto'),
-            ('view_zet', 'Can view Zetto'),
-            ('add_zet', 'Can add Zeto'),
-            ('change_zet', 'Can change Zetto'),
-            ('delete_zet', 'Can delete Zetto'),
+            ('list_app', 'Can view list app'),
+            ('view_app', 'Can view app'),
+            ('add_app', 'Can add app'),
+            ('change_app', 'Can change app'),
+            ('delete_app', 'Can delete app'),
         )
 
     def __unicode__(self):
